@@ -4,13 +4,17 @@ import MesLayout from "./layouts/MesLayout";
 import DashboardPage from "./pages/DashboardPage";
 import WorkOrderPage from "./pages/WorkOrderPage";
 import MaterialPage from "./pages/MaterialPage";
+import LoginPage from "./pages/LoginPage";
+import SignupPage from "./pages/SignUpPage";
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
+        <Route path="/" element={<LoginPage />} />
+        <Route path="signup" element={<SignupPage />} />
         <Route element={<MesLayout />}>
-          <Route path="/" element={<DashboardPage />} />
+          <Route path="/dashboard" element={<DashboardPage />} />
           <Route path="/order" element={<WorkOrderPage />} />
           <Route path="/material" element={<MaterialPage />} />
         </Route>

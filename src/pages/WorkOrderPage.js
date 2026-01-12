@@ -68,7 +68,7 @@ const WorkOrderPage = () => {
       const response = await MesApi.createOrder(productCode, targetQty);
       if (response.data.status === "WAITING") {
         alert("주문 접수 성공! 현재 대기 중 입니다");
-        navigate("/");
+        navigate("/dashboard");
       }
     } catch (e) {
       alert("서버통신 오류!!!");
