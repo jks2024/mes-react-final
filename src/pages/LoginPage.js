@@ -103,6 +103,9 @@ const LoginPage = () => {
       // 2. 응답 데이터에서 토큰 추출 (TokenDto 구조: accessToken, refreshToken)
       const { accessToken, refreshToken } = response.data;
 
+      console.log(accessToken);
+      console.log(refreshToken);
+
       // 3. Common 유틸을 사용하여 브라우저에 토큰 저장
       Common.setAccessToken(accessToken);
       Common.setRefreshToken(refreshToken);

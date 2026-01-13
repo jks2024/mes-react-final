@@ -20,7 +20,7 @@ const MesApi = {
 
   // 주문 생성
   createOrder: (productCode, targetQty) => {
-    return AxiosInstance.post(`api/mes/order`, {
+    return AxiosInstance.post(`/api/mes/order`, {
       productCode,
       targetQty: Number(targetQty),
     });
@@ -37,6 +37,8 @@ const MesApi = {
   inboundMaterial: (formData) => {
     return AxiosInstance.post(`/api/mes/material/inbound`, formData);
   },
+
+  getRecentLogs: () => AxiosInstance.get(`/api/mes/production/recent-logs`),
 };
 
 export default MesApi;
